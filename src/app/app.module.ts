@@ -1,15 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { TeacherComponent } from './Teacher/teacher/teacher.component';
 import { FormsModule } from '@angular/forms';
 import { TeacherDetailComponent } from './Teacher/teacher-detail/teacher-detail.component';
-import {TeacherService} from './Teacher/teacher/teacher.service';
-import { AppRoutingModule } from './Teacher/teacher/app-routing.module';
+import {TeacherService} from './services/teacher.service';
 import { TeacherSideBarComponent } from './teacher-side-bar/teacher-side-bar.component';
 import { AccountLoginComponent } from './account-login/account-login.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { NewsComponent } from './news/news.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { SalarySheetComponent } from './salary-sheet/salary-sheet.component';
+import { LeaveApplicationComponent } from './leave-application/leave-application.component';
+import { AskForAdvancePaymentComponent } from './ask-for-advance-payment/ask-for-advance-payment.component';
+import { HomeworkComponent } from './homework/homework.component';
+import { RequestForMaintenanceComponent } from './request-for-maintenance/request-for-maintenance.component';
 
 
 @NgModule({
@@ -18,12 +25,22 @@ import { AccountLoginComponent } from './account-login/account-login.component';
     TeacherComponent,
     TeacherDetailComponent,
     TeacherSideBarComponent,
-    AccountLoginComponent
+    AccountLoginComponent,
+    HomeComponent,
+    NewsComponent,
+    ContactComponent,
+    AboutComponent,
+    SalarySheetComponent,
+    LeaveApplicationComponent,
+    AskForAdvancePaymentComponent,
+    HomeworkComponent,
+    RequestForMaintenanceComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [TeacherService],
   bootstrap: [AppComponent]

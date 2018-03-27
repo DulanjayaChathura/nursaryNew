@@ -1,4 +1,3 @@
-
 /* The sidebar menu */
 .teacher-side-bar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -7,25 +6,27 @@
   z-index: auto; /* Stay on top */
   top: auto; /* Stay at the top */
   left: 32px;
-  background-color: black; /* Black */
+  background-color: black;
+  /*background-image:url("../assets/background7.jpg");*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
+  list-style-type: none;
 }
 
 /* The navigation menu links */
 .teacher-side-bar li {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 25px 15px 16px;
   text-decoration: none;
   font-size: 17px;
   color: white;
-
+  list-style-type: none;
+  text-align:left;
 }
-
-
-
 /* When you mouse over the navigation links, change their color */
 .teacher-side-bar li:hover {
-  color: blue;
+  color: black;
+  background-color: white;
+
 }
 
 /* Style page content */
@@ -36,6 +37,6 @@
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .teacher-side-bar {padding-top: 15px;}
+  .teacher-side-bar {padding-top: 15 px;}
   .teacher-side-bar a {font-size: 18px;}
 }
