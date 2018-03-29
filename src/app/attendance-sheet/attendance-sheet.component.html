@@ -1,0 +1,12 @@
+<ul class="student">
+  <li *ngFor ="let stu of studentList" (click)="onSelect(stu)"
+  [class.selected]="stu === selectedStudent" >
+     <span class="badge">{{stu.id}}</span>{{stu.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedStudent">
+  <label> Attandance:
+      <input [(ngModel)]="selectedStudent.name" placeholder="Yes/no">
+  </label>
+</div>
