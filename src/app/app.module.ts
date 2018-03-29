@@ -17,6 +17,9 @@ import { LeaveApplicationComponent } from './leave-application/leave-application
 import { AskForAdvancePaymentComponent } from './ask-for-advance-payment/ask-for-advance-payment.component';
 import { HomeworkComponent } from './homework/homework.component';
 import { RequestForMaintenanceComponent } from './request-for-maintenance/request-for-maintenance.component';
+import { StudentDetailsComponent } from './students/student-details/student-details.component';
+import { StudentService } from './services/student.service';
+import { AttendanceSheetComponent } from './attendance-sheet/attendance-sheet.component';
 
 
 @NgModule({
@@ -34,7 +37,9 @@ import { RequestForMaintenanceComponent } from './request-for-maintenance/reques
     LeaveApplicationComponent,
     AskForAdvancePaymentComponent,
     HomeworkComponent,
-    RequestForMaintenanceComponent
+    RequestForMaintenanceComponent,
+    StudentDetailsComponent,
+    AttendanceSheetComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,7 @@ import { RequestForMaintenanceComponent } from './request-for-maintenance/reques
     AppRoutingModule,
 
   ],
-  providers: [TeacherService],
+  providers: [TeacherService, StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './leave-application.component.html',
   styleUrls: ['./leave-application.component.css']
 })
+
 export class LeaveApplicationComponent implements OnInit {
 
   constructor() { }

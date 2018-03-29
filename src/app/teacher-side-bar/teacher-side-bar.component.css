@@ -6,28 +6,50 @@
   z-index: auto; /* Stay on top */
   top: auto; /* Stay at the top */
   left: 32px;
-  background-color: black;
-  /*background-image:url("../assets/background7.jpg");*/
+  background-image: url('assets/background2.jpg');
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
   list-style-type: none;
 }
+.button{
+  list-style-type: none;
+	padding: 10px ;
+	color: black;
+	border: 1px solid #FFF;
+	text-decoration: none;
+	font-size: 17px;
+	line-height: 120%;
+	background-color: rgba(255,255,255, 0);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 2px;
+	-webkit-transition: background-color 300ms ease;
+	-moz-transition: background-color 300ms ease;
+	transition: background-color 300ms ease;
+	cursor: pointer;
+  margin-left:-40px;
+}
+.button:hover{
+  background-color: rgba(255,255,255, 0.3);
+	color: black;
+}
 
-/* The navigation menu links */
+/* The navigation menu links
 .teacher-side-bar li {
   padding: 6px 25px 15px 16px;
   text-decoration: none;
   font-size: 17px;
-  color: white;
+  color: black;
   list-style-type: none;
   text-align:left;
-}
-/* When you mouse over the navigation links, change their color */
+  cursor:pointer;
+}*/
+/* When you mouse over the navigation links, change their color
 .teacher-side-bar li:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
 
-}
+}*/
 
 /* Style page content */
 .main {

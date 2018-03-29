@@ -6,7 +6,8 @@ h1.first-page {
 }
 
 .header {
-  background-image:url("../assets/header.jpeg");
+  background-image:url("../assets/background1.jpg");
+  background-image: image();
   padding: 10px 10px 10px 10px;
   background-attachment: fixed;
   height: auto;
@@ -17,12 +18,16 @@ h1.first-page {
   left: 0;
   background-color: rgb(0, 93, 102);
   overflow: hidden;
+  background-image: url("../assets/background1.jpg");
+  opacity: .8;
+
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
+
   float: left;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 15px 16px;
   text-decoration: none;
