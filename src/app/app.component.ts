@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  selectedbtn:string;
+ onselect(id:string):void{
+   this.selectedbtn=id;
+ }
 }
-

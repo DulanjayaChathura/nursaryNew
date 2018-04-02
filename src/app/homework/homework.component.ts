@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  HomeworkForm } from './homework-form';
 
 @Component({
   selector: 'app-homework',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeworkComponent implements OnInit {
 
   constructor() { }
-
+ newForm=new HomeworkForm();
   ngOnInit() {
   }
 

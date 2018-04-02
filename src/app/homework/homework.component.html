@@ -1,21 +1,44 @@
-<form action="homework">
-  <fieldset>
-    <legend>Home work information:</legend>
-    First name:<br>
-    <input type="text" name="firstname" value="Mickey">
-    <br>
-    Last name:<br>
-    <input type="text" name="lastname" value="Mouse">
-    <br>
-    subject:<br>
-    <input type="text" name="lastname" value="Mouse">
-    <br>
-    About Homework:<br>
-    <input type="text" name="lastname" value="Mouse">
-    <br>
-    comment:<br>
-    <input type="text" name="lastname" value="Mouse">
-    <br><br>
-    <button class="submit">submit</button><br><br><br><br><button class="cancel" margin-		left="0px">cancel</button>
-  </fieldset>
-</form>
+
+<div class="container">
+  <div [hidden]='submitted'>
+    <form (ngSubmit)="onSubmit()" #homeworkForm="ngForm">
+     <div class="form-group">
+       <label for="regNo"><strong>RegNo <span class="important">&#9733;</span></strong></label><br>
+       <input type="text" id="regNo" name="RegistrationNo" placeholder="your registration no"
+        required [(ngModel)]="newForm.regNo" name="regNo" #regNo="ngModel">
+        <div [hidden]="regNo.valid || regNo.pristine"
+        class="alert alert-danger">
+           RegistrationNo is required
+       </div>
+     </div>
+      <div class="form-group">
+         <label for="name"><strong>Name <span class="important">&#9733;</span></strong></label><br>
+         <input type="text" id="name" name="name"
+          required [(ngModel)]="newForm.name" name="name" #name="ngModel" placeholder="your name">
+          <div [hidden]="name.valid || name.pristine"
+          class="alert alert-danger">
+             Name is required
+         </div>
+       </div>
+       <div class="form-group">
+         <label for="subject"><strong>subject <span class="important">&#9733;</span></strong></label><br>
+         <textarea id="subject" name="subject"   required [(ngModel)]="newForm.subject"  style="height:100px" #subject="ngModel" placeholder="subject"></textarea>
+         <div [hidden]="subject.valid || subject.pristine"
+         class="alert alert-danger">
+            subject is required
+         </div>
+        </div>
+        <div class="form-group">
+          <label for="comment"><strong>comment </strong></label><br>
+          <textarea id="comment" name="comment"  [(ngModel)]="newForm.comment"  style="height:100px" #comment="ngModel" placeholder="comment"></textarea><br>
+          <button type="submit" class="btn btn-success" [disabled]="!homeworkForm.form.valid"value="Submit" (click)="snackbar.show()">submit</button>
+          <div>
+        <igx-snackbar #snackbar message="Message sent" displayTime="1000"></igx-snackbar>
+       </div>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

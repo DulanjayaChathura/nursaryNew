@@ -6,10 +6,14 @@ import {students} from '../students/mock-student';
 @Injectable()
 export class StudentService {
 
-  getStudent():Observable<Student[]>{
+  getStudents():Observable<Student[]>{
      return of(students);
 
   }
   constructor() { }
+ getStudent(regNo:string): Observable<Student>{
+     return of(students.find(student => student.regNo === regNo));
+ }
+
 
 }

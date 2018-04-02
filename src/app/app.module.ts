@@ -7,10 +7,10 @@ import { TeacherDetailComponent } from './Teacher/teacher-detail/teacher-detail.
 import {TeacherService} from './services/teacher.service';
 import { TeacherSideBarComponent } from './teacher-side-bar/teacher-side-bar.component';
 import { AccountLoginComponent } from './account-login/account-login.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './nursary-forms/contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { SalarySheetComponent } from './salary-sheet/salary-sheet.component';
 import { LeaveApplicationComponent } from './leave-application/leave-application.component';
@@ -20,6 +20,8 @@ import { RequestForMaintenanceComponent } from './request-for-maintenance/reques
 import { StudentDetailsComponent } from './students/student-details/student-details.component';
 import { StudentService } from './services/student.service';
 import { AttendanceSheetComponent } from './attendance-sheet/attendance-sheet.component';
+import { IgxSnackbarModule } from 'igniteui-angular/main';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -39,15 +41,20 @@ import { AttendanceSheetComponent } from './attendance-sheet/attendance-sheet.co
     HomeworkComponent,
     RequestForMaintenanceComponent,
     StudentDetailsComponent,
-    AttendanceSheetComponent
+    AttendanceSheetComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    IgxSnackbarModule,
 
   ],
   providers: [TeacherService, StudentService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [BrowserModule],
+
+
 })
 export class AppModule { }

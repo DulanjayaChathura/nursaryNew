@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AccountLogin} from './account-login';
 
 @Component({
   selector: 'app-account-login',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountLoginComponent implements OnInit {
   constructor() { }
+  account=new AccountLogin();
 
   ngOnInit() {
   }

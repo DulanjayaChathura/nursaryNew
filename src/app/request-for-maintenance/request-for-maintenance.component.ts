@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MaintenanceRequestForm} from "./maintenance-request-form";
 
 @Component({
   selector: 'app-request-for-maintenance',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RequestForMaintenanceComponent implements OnInit {
 
   constructor() { }
+  newForm=new MaintenanceRequestForm();
 
   ngOnInit() {
   }

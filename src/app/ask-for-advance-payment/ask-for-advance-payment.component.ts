@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdvancePayment } from './advance-payment';
 
 @Component({
   selector: 'app-ask-for-advance-payment',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AskForAdvancePaymentComponent implements OnInit {
 
   constructor() { }
-
+  newForm=new AdvancePayment();
   ngOnInit() {
   }
 

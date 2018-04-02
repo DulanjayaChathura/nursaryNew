@@ -1,12 +1,16 @@
+
+<div class="background">
 <div class="header"><h1 class="first-page" align="center">Nursary</h1></div>
 
 <div class="topnav">
 
-  <nav><a class="active" routerLink ="/home"><strong>Home</strong>  </a></nav>
-  <nav><a routerLink="/AccountLogin"><strong> Log In</strong></a></nav>
-  <nav><a routerLink ="/news"><strong>News</strong></a></nav>
-  <nav><a routerLink ="/contact"><strong>Contact</strong></a></nav>
-  <nav><a routerLink ="/about"><strong>About</strong></a></nav>
+  <nav><a class="active" routerLink ="/home" id="home" [class.selected]="selectedbtn" (click)="onselect(id)"><strong>Home</strong>  </a></nav>
+  <nav><a routerLink="/AccountLogin" id="logIn" [class.selected]="selectedbtn" (click)="onselect(id)"><strong> Log In</strong></a></nav>
+  <nav><a routerLink ="/news" id="news" [class.selected]="selectedbtn" (click)="onselect(id)"><strong>News</strong></a></nav>
+  <nav><a routerLink ="/contact" id="contact" [class.selected]="selectedbtn" (click)="onselect(id)"><strong>Contact</strong></a></nav>
+  <nav><a routerLink ="/about" id="about"><strong>About</strong></a></nav>
+
+</div>
 
 </div>
 <router-outlet></router-outlet>

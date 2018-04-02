@@ -1,9 +1,9 @@
-<ul class="student">
+<ol class="student">
   <li *ngFor ="let stu of studentList" (click)="onSelect(stu)"
   [class.selected]="stu === selectedStudent" >
-     <span class="badge">{{stu.id}}</span>{{stu.name}}
+     {{stu.name}}
   </li>
-</ul>
+</ol>
 
 <div *ngIf="selectedStudent">
   <label> Attandance:
