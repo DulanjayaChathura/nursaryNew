@@ -4,11 +4,11 @@
 
 <div class="topnav">
 
-  <nav><a class="active" routerLink ="/home" id="home" [class.selected]="selectedbtn" (click)="onselect(id)"><strong>Home</strong>  </a></nav>
-  <nav><a routerLink="/AccountLogin" id="logIn" [class.selected]="selectedbtn" (click)="onselect(id)"><strong> Log In</strong></a></nav>
-  <nav><a routerLink ="/news" id="news" [class.selected]="selectedbtn" (click)="onselect(id)"><strong>News</strong></a></nav>
-  <nav><a routerLink ="/contact" id="contact" [class.selected]="selectedbtn" (click)="onselect(id)"><strong>Contact</strong></a></nav>
-  <nav><a routerLink ="/about" id="about"><strong>About</strong></a></nav>
+  <nav><a routerLink ="/home" id="home" [routerLinkActiveOptions]="{exact:true}" routerLinkActive='active'><strong>Home</strong>  </a></nav>
+  <nav><a routerLink ="/AccountLogin" id="logIn" [routerLinkActiveOptions]="{exact:true}" routerLinkActive='active'><strong> Log In</strong></a></nav>
+  <nav><a routerLink ="/news" id="news" [routerLinkActiveOptions]="{exact:true}" routerLinkActive='active'><strong>News</strong></a></nav>
+  <nav><a routerLink ="/contact" id="contact" [routerLinkActiveOptions]="{exact:true}" routerLinkActive='active'><strong>Contact</strong></a></nav>
+  <nav><a routerLink ="/about" id="about" [routerLinkActiveOptions]="{exact:true}" routerLinkActive='active'><strong>About</strong></a></nav>
 
 </div>
 

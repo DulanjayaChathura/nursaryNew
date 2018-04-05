@@ -1,8 +1,20 @@
-<ol class="student">
 
-  <li *ngFor ="let stu of studentList" >
-    <a routerLink="/detail/{stu.regNo}}">
-     {{stu.name}}
-   </a>
-  </li>
-</ol>
+<div *ngIf="selectedStudent" class="details">
+
+<h2>{{selectedStudent.name | uppercase}}'s details</h2>
+
+    <table>
+      <tr>
+        <th>regNo</th>
+        <th>custodian</th>
+        <th>address</th>
+        <th>contactNo</th>
+      </tr>
+      <tr>
+        <td>{{selectedStudent.regNo}}</td>
+        <td>{{selectedStudent.custodian}}</td>
+        <td>{{selectedStudent.address}}</td>
+        <td>{{selectedStudent.contactNo}}</td>
+      </tr>
+    </table>
+</div>

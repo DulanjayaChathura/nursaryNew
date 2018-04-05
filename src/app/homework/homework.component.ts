@@ -12,5 +12,8 @@ export class HomeworkComponent implements OnInit {
  newForm=new HomeworkForm();
   ngOnInit() {
   }
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
 
 }

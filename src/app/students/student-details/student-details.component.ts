@@ -11,16 +11,13 @@ import { Location } from '@angular/common';
   styleUrls: ['./student-details.component.css']
 })
 export class StudentDetailsComponent implements OnInit {
-  @Input() student:Student;
-  studentList :Student[]
-  constructor(private studentService:StudentService,
+ @Input()  selectedStudent:Student;
+   constructor(private studentService:StudentService,
     private route: ActivatedRoute,
     private location: Location ) { }
-  getStudentList(): void{
-    this.studentService.getStudents().subscribe(sList =>this.studentList=sList);
-  }
+
   ngOnInit() {
-    this.getStudentList(),
+
     this.getStudent()
   }
  markAttendance(student:Student){
@@ -28,7 +25,7 @@ export class StudentDetailsComponent implements OnInit {
  }
  getStudent(){
      const regNo = this.route.snapshot.paramMap.get('regNo');
-     this.studentService.getStudent(regNo).subscribe(student=>this.student=student);
+     this.studentService.getStudent(regNo).subscribe(student=>this.selectedStudent=student);
  }
 
 }

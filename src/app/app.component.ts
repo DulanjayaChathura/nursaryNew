@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NameService} from './services/name.service';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  selectedbtn:string;
- onselect(id:string):void{
-   this.selectedbtn=id;
- }
+
+ constructor(public nameService:NameService){}
 }

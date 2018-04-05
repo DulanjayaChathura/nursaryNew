@@ -12,5 +12,8 @@ export class AskForAdvancePaymentComponent implements OnInit {
   newForm=new AdvancePayment();
   ngOnInit() {
   }
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
 
 }

@@ -1,5 +1,5 @@
 export class AttendanceSheet {
-  public attendance:boolean;
+  public attendanceList:string[];
   constructor(){}
 
 }

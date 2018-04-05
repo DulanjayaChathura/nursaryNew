@@ -13,6 +13,7 @@ import { RequestForMaintenanceComponent } from './request-for-maintenance/reques
 import { StudentDetailsComponent } from './students/student-details/student-details.component';
 import { AttendanceSheetComponent } from './attendance-sheet/attendance-sheet.component';
 import { TeacherComponent} from './Teacher/teacher/teacher.component';
+import {DisplayStudentComponent} from './display-student/display-student.component';
 
 const routes: Routes = [
 { path: 'AccountLogin', component: AccountLoginComponent },
@@ -26,9 +27,10 @@ const routes: Routes = [
 {  path: 'advancePayment', component: AskForAdvancePaymentComponent },
 {  path: 'homework', component:  HomeworkComponent },
 {  path: 'maintananceRequest', component:  RequestForMaintenanceComponent },
-{  path: 'studentdetails', component: StudentDetailsComponent },
 {  path: 'attendancesheet', component: AttendanceSheetComponent  },
-{ path: '', redirectTo: '/home', pathMatch: 'full' },
+{ path: '', redirectTo: '/AccountLogin', pathMatch: 'full' },
+{ path: 'detail/:regNo', component: StudentDetailsComponent },
+{ path:'displayStudentdetails',component:DisplayStudentComponent}
 
 ];
 @NgModule({

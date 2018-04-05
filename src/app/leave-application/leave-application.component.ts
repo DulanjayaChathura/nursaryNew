@@ -12,5 +12,7 @@ export class LeaveApplicationComponent implements OnInit {
  newForm=new LeaveForm();
   ngOnInit() {
   }
+  submitted = false;
 
+  onSubmit() { this.submitted = true; }
 }

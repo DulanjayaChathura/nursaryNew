@@ -1,12 +1,22 @@
+
 <ol class="student">
-  <li *ngFor ="let stu of studentList" (click)="onSelect(stu)"
-  [class.selected]="stu === selectedStudent" >
-     {{stu.name}}
+  <li *ngFor ="let stu of studentList" (click)='onSelect(stu)'>
+    <span>{{stu.name}} </span>
   </li>
 </ol>
 
-<div *ngIf="selectedStudent">
-  <label> Attandance:
-      <input [(ngModel)]="selectedStudent.name" placeholder="Yes/no">
-  </label>
+<div class="attendance" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <legend><label style="font-size:20px"> <b><strong>Today Attendance</strong></b></label></legend>
+      <div *ngFor="let stu of attendanceList">
+        <ol class="name">
+          <li (click)="select(stu)" [class.selected]='stu==selectedStudent'>{{stu.name}}</li>
+
+        </ol>
+
+      </div>
+      <button class="btn" type="btn" name="submit" [disabled]='attendanceList.length==0' value="Submit">submit</button>
+      <button class="btn" type="btn" name="delete" [disabled]='attendanceList.length==0||selectedStudent==null'(click)='delete()'>delete</button>
+
+  </fieldset>
 </div>

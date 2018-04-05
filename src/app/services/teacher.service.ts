@@ -4,6 +4,8 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import {TEACHER} from '../Teacher/teacher/teacher';
 
+
+
 @Injectable()
 export class TeacherService {
 
@@ -11,4 +13,5 @@ export class TeacherService {
  getTeachers():Observable<TEACHER[] >{
    return of(teacher);
  }
+
 }

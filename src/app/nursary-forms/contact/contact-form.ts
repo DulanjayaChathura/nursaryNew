@@ -1,12 +1,9 @@
 export class ContactForm {
+  public  email:string;
+  public  name:string;
+  public  message:string;
 
-
-  constructor(
-  public  regNo:string,
-  public  name:string,
-  public  subject:string
-
-  ){
+  constructor(){
 
 
   }

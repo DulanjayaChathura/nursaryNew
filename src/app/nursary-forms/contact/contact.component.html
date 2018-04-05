@@ -1,17 +1,10 @@
 <div class="container">
+  <h1>Contact</h1>
+  <hr align="middle" width="100%" height="3px">
   <div [hidden]='submitted'>
-    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-     <div class="form-group">
-       <label for="regNo"><strong>RegNo <span class="important">&#9733;</span></strong></label>
-       <input type="text" id="regNo" name="RegistrationNo" placeholder="your registration no"
-        required [(ngModel)]="newForm.regNo" name="regNo" #regNo="ngModel">
-        <div [hidden]="regNo.valid || regNo.pristine"
-        class="alert alert-danger">
-           RegistrationNo is required
-       </div>
-     </div>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="form">
       <div class="form-group">
-         <label for="name"><strong>Name <span class="important">&#9733;</span></strong></label>
+         <label for="name" style="color:black"><strong>Name <span class="important">&#9733;</span></strong></label><br>
          <input type="text" id="name" name="name"
           required [(ngModel)]="newForm.name" name="name" #name="ngModel" placeholder="your name">
           <div [hidden]="name.valid || name.pristine"
@@ -19,18 +12,47 @@
              Name is required
          </div>
        </div>
+     <div class="form-group">
+       <label for="Email"  style="color:black"><strong>Email <span class="important">&#9733;</span></strong></label><br>
+       <input type="text" id="email" name="emailAddress" placeholder="your email address"
+        required [(ngModel)]="newForm.email" name="email" #email="ngModel">
+        <div [hidden]="email.valid || email.pristine"
+        class="alert alert-danger">
+           email is required
+       </div>
+     </div>
+
         <div class="form-group">
-          <label for="subject"><strong>Subject <span class="important">&#9733;</span></strong></label>
-          <textarea id="subject" name="subject"   required [(ngModel)]="newForm.subject"  style="height:200px" #subject="ngModel" placeholder="subject"></textarea>
+          <label for="message"  style="color:black"><strong>message <span class="important">&#9733;</span></strong></label><br>
+          <textarea id="message" name="message"   required [(ngModel)]="newForm.message"  style="height:50px" #subject="ngModel" placeholder="message"></textarea><br>
           <div [hidden]="subject.valid || subject.pristine"
           class="alert alert-danger">
-             subject is required
+             message is required
           </div>
-          <button type="submit" class="btn btn-success" [disabled]="!contactForm.form.valid"value="Submit" (click)="snackbar.show()">submit</button>
+          <button type="submit" class="btn btn-success" [disabled]="!contactForm.form.valid"value="Submit" (click)="snackbar.show()" style="width:20%">send</button>
           <div>
         <igx-snackbar #snackbar message="Message sent" displayTime="1000"></igx-snackbar>
        </div>
       </div>
+      <div >
+        <ul class="icon1">
+          <li><img src="./assets/icon/location.png" alt="" width="30px" height="30px" style="margin-top:10px"><span class="detail" style="margin-left:100px;margin-top:-20px;color:black">21,Galle,Ahangama.</span> </li><br><br>
+          <li><img src="./assets/icon/telephone.png" alt="" width="30px" height="30px" style="margin-top:10px"><span class="detail"  style="margin-left:100px;margin-top:-20px;color:black">(617)312-2190</span> </li><br>
+          <li><img src="./assets/icon/letter.png" alt="" width="30px" height="30px" style="margin-top:10px"><span class="detail"  style="margin-left:100px;margin-top:-20px;color:black">sacexample@gmail.com</span> </li><br><br>
+          <li><hr align="left" width="100%" height="3px"></li>
+        </ul>
+
+      </div>
+       <div class="icon2">
+         <ul>
+           <img src="./assets/icon/facebook.png" alt="" width="30px" height="30px" style="padding-left:10px">
+           <img src="./assets/icon/google.png" alt="" width="30px" height="30px"  style="padding-left:10px">
+           <img src="./assets/icon/instagram.png" alt="" width="30px" height="30px"  style="padding-left:10px">
+           <img src="./assets/icon/linkedin.png" alt="" width="30px" height="30px"  style="padding-left:10px">
+           <img src="./assets/icon/twitter.png" alt="" width="30px" height="30px"  style="padding-left:10px">
+         </ul>
+
+       </div>
 
     </form>
 

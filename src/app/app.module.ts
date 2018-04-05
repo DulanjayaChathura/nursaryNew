@@ -22,6 +22,9 @@ import { StudentService } from './services/student.service';
 import { AttendanceSheetComponent } from './attendance-sheet/attendance-sheet.component';
 import { IgxSnackbarModule } from 'igniteui-angular/main';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DisplayStudentComponent } from './display-student/display-student.component';
+import { NameService } from './services/name.service';
+
 
 
 @NgModule({
@@ -42,6 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RequestForMaintenanceComponent,
     StudentDetailsComponent,
     AttendanceSheetComponent,
+    DisplayStudentComponent,
+
 
   ],
   imports: [
@@ -51,7 +56,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IgxSnackbarModule,
 
   ],
-  providers: [TeacherService, StudentService],
+  providers: [TeacherService, StudentService, NameService],
   bootstrap: [AppComponent],
   exports: [BrowserModule],
 

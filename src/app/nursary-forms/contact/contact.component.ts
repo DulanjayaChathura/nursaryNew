@@ -16,6 +16,6 @@ export class ContactComponent implements OnInit {
   submitted = false;
 
   onSubmit() { this.submitted = true; }
-  newForm=new ContactForm("123","Chathura","abcdefghijaklmanop");
+  newForm=new ContactForm();
   get diagnostic() { return JSON.stringify(this.newForm); }
 }
